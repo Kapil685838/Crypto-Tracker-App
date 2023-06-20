@@ -7,7 +7,7 @@ import TabsComponent from "../components/Dashboard/Tabs";
 import { get100Coins } from "../functions/get100Coins";
 
 function WatchlistPage() {
-  const coins = JSON.parse(localStorage.getItem("watchlist"));
+  const coins = JSON.parse(localStorage.getItem("watchlist")) || [];
   const [myWatchlist, setMyWatchlist] = useState([]);
   const [loading, setLoading] = useState(true);
 
