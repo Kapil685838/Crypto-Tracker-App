@@ -6,11 +6,12 @@ function CoinInfo({ name, desc }) {
   const smallDesc =
     desc.length > 400
       ? desc.slice(0, 400) +
-        "<p style='color:var(--grey); cursor:pointer;'>Read More...</p>"
+      "<p style='color:var(--grey); cursor:pointer;'>Read More...</p>"
       : desc;
   const fullDesc =
     desc.length > 400
-      ? desc + "<p style='color:var(--grey);cursor:pointer;'>Read Less...</p>"
+      ? desc +
+      "<p style='color:var(--grey);cursor:pointer;'>Read Less...</p>"
       : desc;
 
   return (

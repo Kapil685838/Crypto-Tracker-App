@@ -17,14 +17,9 @@
   color: var(--blue);
 }
 
-.heading-1:hover {
-  color: var(--tomato);
+ .heading-1:hover {
+  color: var(--black);
   -webkit-text-stroke: 2px var(--white);
-  transition: all 0.3s;
-}
-.heading-2:hover {
-  color: var(--yellow);
-  -webkit-text-stroke: 1px var(--white);
   transition: all 0.3s;
 }
 .para {
