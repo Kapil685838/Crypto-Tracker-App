@@ -7,11 +7,11 @@ import "./styles.css";
 
 function Header() {
   const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("theme") == "dark" ? true : false
+    localStorage.getItem("theme") === "dark" ? false : true
   );
 
   useEffect(() => {
-    if (localStorage.getItem("theme") == "dark") {
+    if (localStorage.getItem("theme") === "dark") {
       setDark();
     } else {
       setLight();
@@ -22,21 +22,21 @@ function Header() {
     setDarkMode(!darkMode);
     toast.success("Theme Changed!");
     const mode = localStorage.getItem("theme");
-    if (mode == "dark") {
+    if (mode === "dark") {
       setLight();
     } else {
       setDark();
     }
   };
 
-  const setDark = () => {
-    localStorage.setItem("theme", "dark");
-    document.documentElement.setAttribute("data-theme", "dark");
-  };
-
   const setLight = () => {
     localStorage.setItem("theme", "light");
     document.documentElement.setAttribute("data-theme", "light");
+  };
+
+  const setDark = () => {
+    localStorage.setItem("theme", "dark");
+    document.documentElement.setAttribute("data-theme", "dark");
   };
 
   return (
@@ -63,7 +63,7 @@ function Header() {
           <p className="link">Watchlist</p>
         </a>
         <a href="/Dashboard">
-          <Button outlined={true} 
+          <Button outlined={true}
             text="Dashboard"
             onClick={() => {
               console.log("btn-clicked!!!");

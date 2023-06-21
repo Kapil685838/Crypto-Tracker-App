@@ -50,7 +50,7 @@ function LandingPageComponent() {
           <RWebShare
             data={{
               text: "CryptoTracker, made using React JS.",
-              url: "https://crypto-tracker-app-kappa.vercel.app/",
+              url: "https://crypto-tracker-app-react.vercel.app/",
               title: "CryptoTracker.",
             }}
             onClick={() => console.log("shared successfully!")}
