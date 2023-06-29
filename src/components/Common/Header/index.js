@@ -1,75 +1,39 @@
-import { Switch } from "@mui/material";
-import React, { useEffect, useState } from "react";
-import { toast } from "react-toastify";
+import React from "react";
 import Button from "../Button";
 import MobileDrawer from "./drawer";
 import "./styles.css";
+import { Link } from "react-router-dom";
+import DarkMode from "../DarkMode";
 
 function Header() {
-  const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("theme") === "dark" ? false : true
-  );
-
-  useEffect(() => {
-    if (localStorage.getItem("theme") === "dark") {
-      setDark();
-    } else {
-      setLight();
-    }
-  }, []);
-
-  const changeMode = () => {
-    setDarkMode(!darkMode);
-    toast.success("Theme Changed!");
-    const mode = localStorage.getItem("theme");
-    if (mode === "dark") {
-      setLight();
-    } else {
-      setDark();
-    }
-  };
-
-  const setLight = () => {
-    localStorage.setItem("theme", "light");
-    document.documentElement.setAttribute("data-theme", "light");
-  };
-
-  const setDark = () => {
-    localStorage.setItem("theme", "dark");
-    document.documentElement.setAttribute("data-theme", "dark");
-  };
+  
 
   return (
     <div className="header">
-      <a href="/">
+      <Link to="/">
         <h1>
           CryptoTracker<span style={{ color: "var(--blue)" }}>.</span>
         </h1>
-      </a>
+      </Link>
       <div className="links-flex">
-        <Switch
-          checked={darkMode}
-          onClick={() => {
-            changeMode();
-          }}
-        />
-        <a href="/">
+        <DarkMode />
+        <Link to="/">
           <p className="link">Home</p>
-        </a>
-        <a href="/compare">
+        </Link>
+        <Link to="/compare">
           <p className="link">Compare</p>
-        </a>
-        <a href="/watchlist">
+        </Link>
+        <Link to="/watchlist">
           <p className="link">Watchlist</p>
-        </a>
-        <a href="/Dashboard">
+        </Link>
+        <Link to="/Dashboard">
           <Button outlined={true}
             text="Dashboard"
             onClick={() => {
               console.log("btn-clicked!!!");
             }}
           />
-        </a>
+        </Link>
       </div>
       <MobileDrawer />
     </div>

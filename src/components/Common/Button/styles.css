@@ -28,6 +28,7 @@
     transition: all ease 0.3s;
     box-shadow: 2px 2px 2px var(--white);
     width: 6rem;
+    min-width: 100px;
     text-align: center;
 }
 .outlined-btn:hover{

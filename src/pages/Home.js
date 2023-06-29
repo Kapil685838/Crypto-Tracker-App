@@ -1,16 +1,10 @@
-import React from 'react'
-import Header from '../components/Common/Header'
-import MainComponent from '../components/LandingPage/MainComponent'
-import Footer from '../components/Common/Footer';
+import React from 'react';
+import MainComponent from '../components/LandingPage/MainComponent';
 
 function HomePage() {
   return (
     <div>
-        <Header />
-        <MainComponent />
-        <br/>
-        <br/>
-        <Footer />
+      <MainComponent />
     </div>
   )
 }

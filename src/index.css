@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 :root {
   --white: #fff;
   --black: #111;
@@ -10,18 +11,6 @@
   --teal :rgb(15, 66, 66);
   --sky: rgb(150, 216, 216);
   --tomato : tomato;
-  --yellow : rgb(226, 226, 45);
-
-}
-
-[data-theme="dark"] {
-  --white: #ffffff;
-  --black: #111;
-  --grey: #a5a2a2;
-  --darkgrey: #1b1b1b;
-  --teal :rgb(15, 66, 66);
-  --sky: rgb(150, 216, 216);
-  --tomato : rgb(228, 59, 29);
   --yellow : rgb(226, 226, 45);
 }
 
@@ -59,20 +48,18 @@ p {
   color: var(--white);
 }
 
-
 ::selection {
   background-color: var(--blue);
   color: var(--white);
 }
 
 ::-webkit-scrollbar {
-  width: 0rem;
+  width: 0.5rem;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--black);
-  color: var(--black);
-  border-radius: 1px;
+  border-radius: 1rem;
+  background-color: var(--blue);
 }
 
 img {

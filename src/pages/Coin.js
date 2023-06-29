@@ -4,14 +4,12 @@ import CoinInfo from "../components/Coin/CoinInfo/info";
 import LineChart from "../components/Coin/LineChart/lineChart";
 import PriceToggle from "../components/Coin/PriceToggle/priceToggle";
 import SelectDays from "../components/Coin/SelectDays/selectDays";
-import Header from "../components/Common/Header";
 import Loader from "../components/Common/Loader/loader";
 import { coinObject } from "../functions/coinObject";
 import { getCoinData } from "../functions/getCoinData";
 import { getCoinPrices } from "../functions/getCoinPrices";
 import { settingChartData } from "../functions/settingChartData";
 import List from "../components/Dashboard/List";
-import Footer from "../components/Common/Footer";
 
 function CoinPage() {
   const { id } = useParams();
@@ -63,7 +61,6 @@ function CoinPage() {
 
   return (
     <div>
-      <Header />
       {loading || !coin?.id || !chartData ? (
         <Loader />
       ) : (
@@ -82,7 +79,6 @@ function CoinPage() {
           <CoinInfo name={coin.name} desc={coin.desc} />
         </>
       )}
-      <Footer />
     </div>
   );
 }

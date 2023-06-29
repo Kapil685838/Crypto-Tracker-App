@@ -5,6 +5,7 @@ import gradient from "../../../assets/gradient.png";
 import iPhone from "../../../assets/iphone.png";
 import { motion } from "framer-motion";
 import { RWebShare } from "react-web-share";
+import { Link } from "react-router-dom";
 
 function LandingPageComponent() {
   return (
@@ -32,8 +33,7 @@ function LandingPageComponent() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Track crypto through a public api in real time. Visit the dashboard to
-          do so!
+          Track crypto through a public api in real time. Visit the dashboard to do so!
         </motion.p>
         <motion.div
           className="btn-flex"
@@ -41,12 +41,12 @@ function LandingPageComponent() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          <a href="/Dashboard">
+          <Link to="/Dashboard">
             <Button text="Dashboard"
-            onClick={() => {
-              console.log("btn-clicked!!!");
-            }} />
-          </a>
+              onClick={() => {
+                console.log("btn-clicked!!!");
+              }} />
+          </Link>
           <RWebShare
             data={{
               text: "CryptoTracker, made using React JS.",

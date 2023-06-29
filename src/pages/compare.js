@@ -2,11 +2,8 @@ import React, { useEffect, useState } from "react";
 import CoinInfo from "../components/Coin/CoinInfo/info";
 import LineChart from "../components/Coin/LineChart/lineChart";
 import PriceToggle from "../components/Coin/PriceToggle/priceToggle";
-// import Footer from "../components/Common/Footer/footer";
-import Header from "../components/Common/Header";
 import Loader from "../components/Common/Loader/loader";
 import SelectCoin from "../components/Compare/SelectCoin/selectCoin";
-// import List from "../components/Dashboard/List/list";
 import { coinObject } from "../functions/coinObject";
 import { get100Coins } from "../functions/get100Coins";
 import { getCoinData } from "../functions/getCoinData";
@@ -88,7 +85,6 @@ function ComparePage() {
 
   return (
     <div>
-      <Header />
       {loading || !coin1Data?.id || !coin2Data?.id ? (
         <Loader />
       ) : (
@@ -122,7 +118,6 @@ function ComparePage() {
           <CoinInfo name={coin2Data.name} desc={coin2Data.desc} />
         </>
       )}
-      {/* <Footer /> */}
     </div>
   );
 }
